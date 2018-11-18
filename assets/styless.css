@@ -1,0 +1,553 @@
+*{
+  margin: 0;
+  
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  position: relative;
+  padding-bottom: 100px;
+  line-height: 1.428571429;
+}
+
+nav{
+  height: 60px;
+  background: white;
+  position: relative;
+  min-width: 100%;
+}
+
+nav button{
+  background: none;
+  color: black;
+  border: 0;
+  cursor: pointer;
+  font-size: 1em;
+
+}
+
+nav ul{
+  float: right; 
+  list-style-type: none;
+}
+
+nav button:hover{
+  border-bottom: 2px solid black;
+}
+
+nav ul li{
+  
+  display: inline-block;
+  margin-top: 15px; 
+  margin-right: 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: black;
+  padding: 5px 20px;
+  font-weight: bold; 
+}
+
+h1 a{
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+nav h1{
+  padding-top: 10px;
+  
+}
+
+
+nav:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+nav ul li a:hover{
+  
+  border-bottom: 2px solid #ebebeb;
+
+}
+
+.logout-button{
+  font-weight: bolder;
+}
+
+.head-content{
+  background: #ebebeb;
+  display: grid;
+  grid-auto-rows: minmax(70px,70px);
+  max-width: 100%;
+  margin: 0 auto;
+  grid-gap: 10px;
+  overflow: hidden;
+  grid-template-areas: 
+  "sec1 sec1 sec2 sec4"
+  "sec1 sec1 sec2 sec4"
+  "sec1 sec1 sec2 sec4"
+  "sec1 sec1 sec2 sec5"
+  "sec1 sec1 sec3 sec5"
+  "sec1 sec1 sec3 sec5"
+  "sec1 sec1 sec3 sec5"
+  "sec1 sec1 sec3 sec5";
+}
+
+
+#sec-img:hover{
+  transform: scale(1.1);
+  
+}
+
+/*//////////SECTION1////////////////*/
+.sec1{
+  grid-area: sec1;
+  position: relative;
+  overflow: hidden; 
+}
+
+#sec-img{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: 80% 100%;
+  position: absolute;
+  transition: all ease 1s; 
+  cursor: pointer;
+}
+.sec1 footer{
+  position: absolute;
+  background: rgba(15,15,15,0.78);
+  bottom: 1px;
+  width: 100%;
+  
+}
+.sec1 footer figcaption{
+  padding: 20px 20px 24px 20px;
+  
+  
+}
+.sec1 footer figcaption h2{
+  color: white;
+  
+}
+.sec1 footer figcaption p{
+  color: white;
+}
+
+
+
+/*//////////SECTION2////////////////*/
+
+.sec2{
+  grid-area: sec2;
+  position: relative;
+  overflow: hidden; 
+}
+
+.sec2 footer{
+  position: absolute;
+  background: rgba(15,15,15,0.78);
+  bottom: 1px;
+  width: 100%;
+  
+}
+.sec2 footer figcaption{
+  padding: 20px 20px 24px 20px;
+  
+  
+}
+.sec2 footer figcaption h2{
+  color: white;
+  
+}
+.sec2 footer figcaption p{
+  color: white;
+}
+
+
+/*//////////SECTION3////////////////*/
+.sec3{
+  grid-area: sec3;
+  position: relative;
+  overflow: hidden; 
+}
+.sec3 footer{
+  position: absolute;
+  background: rgba(15,15,15,0.78);
+  bottom: 1px;
+  width: 100%;
+  
+}
+.sec3 footer figcaption{
+  padding: 20px 20px 24px 20px;
+  
+  
+}
+.sec3 footer figcaption h2{
+  color: white;
+  
+}
+.sec3 footer figcaption p{
+  color: white;
+}
+/*//////////SECTION4////////////////*/
+.sec4{
+  grid-area: sec4;
+  position: relative;
+  overflow: hidden; 
+}
+.sec4 footer{
+  position: absolute;
+  background: rgba(15,15,15,0.78);
+  bottom: 1px;
+  width: 100%;
+}
+
+.sec4 footer figcaption{
+  padding: 20px 20px 24px 20px;
+}
+
+.sec4 footer figcaption h2{
+  color: white;
+}
+
+.sec4 footer figcaption p{
+  color: white;
+}
+/*//////////SECTION5////////////////*/
+.sec5{
+  grid-area: sec5;
+  position: relative;
+  overflow: hidden; 
+}
+.sec5 footer{
+  position: absolute;
+  background: rgba(15,15,15,0.78);
+  bottom: 1px;
+  width: 100%;
+  
+}
+.sec5 footer figcaption{
+  padding: 20px 20px 24px 20px;
+  
+  
+}
+.sec5 footer figcaption h2{
+  color: white;
+  
+}
+.sec5 footer figcaption p{
+  color: white;
+}
+
+
+
+
+#Article-list{
+  color: #333;
+  padding: 20px;
+  background: #ebebeb;
+  font-weight: lighter;
+}
+
+.article-wrapper{
+  background: #ebebeb;
+  padding-top: 20px;
+  
+  
+}
+
+.articles{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 100%;
+  margin: 0 10px;
+  position: relative;
+  border-left: 0.5px solid rgb(180, 177, 177);
+  overflow: hidden;
+}
+
+
+#image-a img{
+  margin-top: 20px;
+  min-width:100%;
+  transition: ease 1.5s all;
+  
+}
+
+#article-a{
+  position: absolute;
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+  transition: ease 1.5s all;
+  
+}
+
+
+#article-p{
+  position: absolute;
+  color: red;
+  margin-top: 50px;
+  margin-left: 10px;
+  transition: ease 1.5s all;
+}
+
+.image-container{
+  height: 300px;
+  padding: 20px 20px 130px 20px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 0.5px solid rgb(180, 177, 177);
+  border-right: 0.55px solid rgb(180, 177, 177); 
+  
+  transition: ease 0.5s all;
+  color: #333;
+  font-weight: normal;
+  
+  
+}
+
+.fa-newspaper span{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.image-container:hover{
+  background: white;
+  
+}
+
+.base-footer{
+
+ position: absolute;
+ bottom: 0px;
+ width: 100%;
+ height: 80px;
+ background-color: white;
+}
+
+
+.fa-facebook-f{color: rgb(180, 177, 177);}
+
+.fa-twitter{color: rgb(180, 177, 177);}
+
+
+.social{
+  float:left;
+  margin-left: 10px
+}
+.social li{
+  display: inline-block;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+.social li a{
+  text-decoration: none;
+  color: rgb(180, 177, 177);
+  border: 1px solid rgb(180, 177, 177);
+  padding: 5px;
+}
+
+.about{
+  float:right;
+  margin-right:10px;
+}
+.about li{
+  display: inline-block;
+  padding: 5px;
+  font-size: 12px;
+  padding-top: 15px;
+}
+.about li a,p{
+  text-decoration: none;
+  color: rgb(180, 177, 177);
+}
+
+.article-detail{
+  background: #ebebeb;
+  margin: 0 200px 0 200px; 
+  border-radius: 20px;
+  min-height: 450px;
+}
+.article-detail h1{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.article-detail p{
+  padding: 50px;
+  text-align: justify;
+  text-justify: auto;
+  color: black;
+  line-height: 1.4em;
+  text-indent: 50px;
+  
+}
+
+.wrapper-create{
+  background: #ebebeb;
+  margin: 0 200px 0 200px; 
+  border-radius: 20px;
+  min-height: 460px;
+}
+.create-article{
+  padding: 20px 70px 0px 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-create h2{
+  padding-top: 20px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.input-create{
+  margin: 20px 70px 0 70px;
+}
+
+/*Media Queries*/
+/*tablets*/
+
+@media screen and (max-width: 768px){
+
+  nav{
+    height: 100px;
+  }
+  .head-content{
+    background: #ebebeb;
+    display: grid;
+    grid-auto-rows: minmax(70px,70px);
+    max-width: 100%;
+    margin: 0 auto;
+    grid-gap: 10px;
+    overflow: hidden;
+    grid-template-areas: 
+    "sec1 sec1 sec3 sec3"
+    "sec1 sec1 sec3 sec3"
+    "sec1 sec1 sec3 sec3"
+    "sec1 sec1 sec5 sec5"
+    "sec2 sec2 sec5 sec5"
+    "sec2 sec2 sec5 sec5"
+    "sec2 sec2 sec4 sec4"
+    "sec2 sec2 sec4 sec4";
+  }
+  .articles{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+    margin: 0 10px;
+    position: relative;
+    border-left: 0.5px solid rgb(180, 177, 177);
+    overflow: hidden;
+  }
+  .wrapper-create{
+    margin: 0 50px 0 50px;
+
+    }
+
+    .article-detail{
+      margin: 20px 10px 20px 10px;
+    }
+    #sec-img{
+      height: auto;
+    }
+    
+  }
+
+
+
+
+
+
+/*mobiles*/
+@media screen and (max-width: 480px){
+
+  nav{
+    height: 150px;
+    
+  }
+  nav h1{
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .head-content{
+    background: #ebebeb;
+    display: grid;
+    grid-auto-rows: minmax(70px,70px);
+    max-width: 100%;
+    margin: 0 auto;
+    grid-gap: 10px;
+    overflow: hidden;
+    grid-template-areas: 
+    "sec1 sec1 sec1 sec1"
+    "sec1 sec1 sec1 sec1"
+    "sec1 sec1 sec1 sec1"
+    "sec2 sec2 sec2 sec2"
+    "sec2 sec2 sec2 sec2"
+    "sec2 sec2 sec2 sec2"
+    "sec3 sec3 sec3 sec3"
+    "sec3 sec3 sec3 sec3"
+    "sec3 sec3 sec3 sec3"
+    "sec4 sec4 sec4 sec4"
+    "sec4 sec4 sec4 sec4"
+    "sec4 sec4 sec4 sec4"
+    "sec5 sec5 sec5 sec5"
+    "sec5 sec5 sec5 sec5"
+    "sec5 sec5 sec5 sec5";
+  }
+  .articles{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin: 0 10px;
+    position: relative;
+    border-left: 0.5px solid rgb(180, 177, 177);
+    overflow: hidden;
+  }
+
+  h1 a {
+    
+    padding: 5px;
+  }
+  nav ul li a{
+    padding: 0;
+  }
+
+  #sec-img{
+    height: auto;
+  }
+
+  .wrapper-create{
+    margin: 0 10px 0 10px;
+
+    }
+  
+  .helptext{
+    font-size: 10px;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .create-article{
+    padding: 20px 20px 0px 20px
+  }
+  nav ul{
+    padding: 0;
+  }
+
+  .article-detail{
+    margin: 10px 0 10px 0;
+  }
+}

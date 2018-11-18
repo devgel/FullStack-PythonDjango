@@ -1,0 +1,92 @@
+{% extends "base_layout.html" %}
+
+
+{% block content %}  
+<h1 id="Article-list">Featured Articles</h1>
+<div class="head-content">
+  <div class="sec1">
+    <a href="/how-to-make-your-future-habits-easy/">
+      <img id="sec-img" src="/media/1.jpg">
+    </a>
+    <footer>
+      <figcaption>
+        <h2>How to Make Your Future Habits Easy</h2>
+        <p>Behavioral Psychology, Habits</p>
+      </figcaption>
+    </footer>
+  </div>
+  <div class="sec2">
+      <a href="/the-subtle-part-of-not-giving-a-fuck/">
+      <img id="sec-img" src="/media/2.png">
+    </a>   
+  <footer>
+      <figcaption>
+        
+        <h2>The Subtle Part of not Giving a Fuck</h2>
+      
+        <p>Tim doesn't give a fuck.</p>
+      </figcaption>
+    </footer>
+  </div>
+  <div class="sec3">
+    <a href="/screw-finding-your-passion/">
+      <img id="sec-img" src="/media/3.jpg">
+    </a>
+      <footer>
+          <figcaption>
+            <h2>The Four Stages of Life</h2>
+            <p>The phases of life that we all travel through.</p>
+          </figcaption>
+        </footer>
+  </div>
+  <div class="sec4">
+    <a href="">
+      <img src="/media/12.jpg" height="260" width="42">
+    </a>
+      <img id="sec-img" src="/media/5.jpg">
+    </a>
+      <footer>
+        <figcaption>
+          <h2>Love is Not Enough</h2>
+          <p>Why we idealize love?</p>
+        </figcaption>
+      </footer>
+  </div>
+  <div class="sec5">
+      <img id="sec-img" src="/media/4.jpg">
+      <footer>
+          <figcaption>
+            <h2>In Defense of Being Average</h2>
+            <p>A much-needed defense of the unexceptional.</p>
+          </figcaption>
+        </footer>
+  </div>
+</div>
+
+
+
+<div class="article-wrapper">
+   
+    <div class="articles">
+      {% for i in articles_list %}  
+          <div class="image-container">
+            
+            <p id="image">
+              <a id="image-a" href="{% url 'articles:detail' slug=i.slug %}">
+                <img src="{{ i.thumb.url }}" height="260"  width="42" />
+              </a>
+            </p>
+          <div class="details">
+            <div class="content">
+              <h2>{{ i.title }}</h2>
+              <p>posted by: {{ i.author }}</p>
+              
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+  
+{% endblock %}

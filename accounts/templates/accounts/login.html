@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="wrapper-create">
+<h2>Log in</h1>
+<form class="site-form" action="{% url 'accounts:login' %}" method="POST">
+{% csrf_token %}
+<div class="create-article">
+{{ form }}
+</div>
+{% if request.GET.next %}
+    <input type="hidden" name="next" value="{{ request.GET.next }}">
+{% endif %}
+<input class="input-create" type="submit" name="" id="" value="Login">
+</form>
+</div>
+{% endblock %}

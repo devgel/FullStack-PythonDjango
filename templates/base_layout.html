@@ -1,0 +1,72 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="{% static 'styless.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Articles.com</title>
+  </head>
+<body>
+
+    <header>
+      <nav>
+        <ul>
+            
+          {% if user.is_authenticated%}
+            <li>
+            <form class="logout-link" action="{% url 'accounts:logout' %}" method="POST">
+            {% csrf_token %}
+            <button class="logout-button" type="submit">Logout</button>
+          </form>
+          </li>
+          <li><a class="highlight" href="{% url 'articles:create' %}">New Article</a></li>
+           {% else %}
+            <li>
+              <a href="{% url 'accounts:login' %}">Login</a>
+            </li>
+            <li>
+                <a href="{% url 'accounts:signup' %}">Signup!</a>
+              </li>
+          {% endif %}
+
+          
+        </ul>
+        
+        <h1><a class="home" href="{% url 'home'%}"><i class="far fa-newspaper fa-2x"> <span>Articles.com</span></i></a></h1>
+      
+      </nav>
+    </header>
+
+    <footer class="base-footer">
+      
+      <ul class="social">
+        <li><a href="#top">Back to top</a></li>
+        <li><i class="fab fa-facebook-f fa-2x"></i></li>
+        <li><i class="fab fa-twitter fa-2x"></i></i></li>
+      </ul>
+
+      <ul class="about">
+        <li><a href="">Contact Me</a></li>
+        <li><a href="">Terms of Use</a></li>
+        <li><a href="">Trademarks</a></li>
+        <li><a href="">Privacy & Cookies</a></li>
+        <li><p>Ⓒ2018 Argel</p></li>
+      </ul>
+    </footer>
+
+    
+   
+
+    
+    <div class="wrapper">
+      {% block content %}
+      
+      {% endblock %}  
+   </div>
+    
+</body>
+</html>

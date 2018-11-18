@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="wrapper-create">
+<h2>Sign up!</h1>
+<form class="site-form" action="/accounts/signup/" method="POST">
+{% csrf_token %}
+<div class="create-article">
+{{ form }}
+</div>
+<input class="input-create" type="submit" name="" id="" value="Sign up!">
+</form>
+</div>
+{% endblock %}
